@@ -1,0 +1,33 @@
+package com.company;
+
+public class FamilyDoctor {
+    private boolean m_is_occupied;
+    private String m_clinic;
+
+    public String getM_clinic() {
+        return m_clinic;
+    }
+
+    public boolean isM_is_occupied() {
+        return m_is_occupied;
+    }
+
+    public void setM_is_occupied(boolean m_is_occupied) {
+        this.m_is_occupied = m_is_occupied;
+    }
+
+    public void acceptClient()
+    {
+        if(m_is_occupied==true)
+            System.out.println("The doctor is busy...");
+        else {
+            System.out.println("Welcome!");
+            m_is_occupied=true;
+        }
+    }
+
+    public void finishAppointment()
+    {
+        m_is_occupied=false;
+    }
+}
